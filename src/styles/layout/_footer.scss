@@ -27,4 +27,17 @@
         line-height: 1.15;
         color: var(--base-color);
     }
+
+    &__link-body{
+      margin-top: px-to-rem(20px);
+      text-align: center;
+    }
+    &__link{
+        font-size: px-to-rem(20px);
+        color: var(--base-color);
+        transition: .3s;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 }
