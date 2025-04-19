@@ -1,0 +1,53 @@
+@use"../function/_mixin.scss" as *;
+
+.nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: px-to-rem(200px);
+    height: 100vh;
+    background-color: var(--main-color);
+    transform: translateX(300px);
+    transition: transform .5s;
+    @include responsive("tablet"){
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      transform: none;
+    }
+    &__list{
+      padding: px-to-rem(90px) 0 0 px-to-rem(50px);
+      @include responsive("tablet"){
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+    }
+    &__item:not(:first-of-type){
+      margin-top: px-to-rem(25px);
+      @include responsive("tablet"){
+        margin: 0 0 0 px-to-rem(30px);
+      }
+     }
+    &__link{
+       font-weight: bold;
+       letter-spacing: .05em;
+       color:var(--base-color);
+       transition: .3s;
+       &:hover{
+       opacity: .7;
+       }
+      @include responsive("tablet"){
+        color: var(--text-color);
+        &:hover{
+          color: var(--main-color);
+          }
+      }
+    }
+}
+
+.nav.is-active{
+  transform: none;
+}

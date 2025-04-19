@@ -1,0 +1,36 @@
+<%
+  const pageMeta = typeof templateParameters !== 'undefined' ? templateParameters.pageMeta : metaData.default;
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= pageMeta.description %>"">
+  <meta name="robots" content="noindex, nofollow">
+  <title><%= pageMeta.title %></title>
+  <!-- OGP -->
+  <meta property="og:title" content="<%= pageMeta.title %>">
+  <meta property="og:description" content="<%= pageMeta.description %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://start-services.netlify.app/">
+  <meta property="og:image" content="https://start-services.netlify.app/img/OGP.png">
+    <!-- Google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+ <%- include('../layout/_header.ejs') %>
+
+ <main class="main">
+ <%- include('../section/_mv.ejs') %>
+ <%- include('../section/_news.ejs') %>
+ <%- include('../section/_service.ejs') %>
+ </main>
+ <%- include('../layout/_footer.ejs') %>
+</body>
+</html>

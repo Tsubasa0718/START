@@ -1,0 +1,29 @@
+@use"../function/_mixin.scss" as *;
+
+.service{
+  padding: px-to-rem(50px) 0 px-clamp(60,100,375,2000) 0;
+  &__wrapper{
+    display: flex;
+    align-items: center;
+    @include responsive("tablet"){
+        justify-content: space-between;
+    }
+  }
+  &__title{
+    white-space: nowrap;
+  }
+  &__head{
+    position: relative;
+    top:px-to-rem(10px);
+    left: px-to-rem(-54px);
+    z-index: -1;
+    font-size: px-clamp(70,168,375,2000); 
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: var(--service-color);
+    @include responsive("tablet"){
+        top:px-to-rem(20px);
+        left: 0;
+    }
+}
+}

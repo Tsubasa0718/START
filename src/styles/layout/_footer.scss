@@ -1,0 +1,30 @@
+@use"../function/_mixin.scss" as *;
+
+.footer{
+    background-color: var(--main-color);
+    &__body{
+      padding: px-clamp(42,60,375,2000) 0 px-clamp(32,50,375,2000) 0;
+    }
+    &__nav{
+        margin-bottom: px-to-rem(20px);
+    }
+    &__nav-list{
+        display: flex;
+        align-items: center;
+    }
+    &__nav-item:not(:first-of-type){
+        margin-left: px-clamp(25,30,375,2000);
+    }
+    &__nav-link{
+        font-size: px-to-rem(14px);
+        font-weight: bold;
+        color: var(--base-color);
+        letter-spacing: .05em;
+    }
+    &__copy{
+        font-size: px-to-rem(12px);
+        letter-spacing: .03em;
+        line-height: 1.15;
+        color: var(--base-color);
+    }
+}

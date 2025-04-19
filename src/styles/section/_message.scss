@@ -1,0 +1,60 @@
+@use "../function/_mixin.scss" as *;
+
+.message{
+ padding: px-clamp(40,60,375,2000) 0 px-clamp(60,100,375,2000) 0;
+ &__title-body{
+    margin-bottom:  px-clamp(30,40,375,2000);
+ }
+ &__title{
+    font-size: px-clamp(24,40,375,2000);
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--main-color);
+ }
+ &__subtitle-body{
+    margin-top: px-clamp(15,20,375,2000);
+    display: block;
+    text-align: center;
+ }
+ &__subtitle{
+    font-size: px-clamp(15,18,375,2000);
+ }
+ 
+ // CEOメッセージ部分のスタイル追加
+ &__ceo-wrapper {
+   width: 100%;
+   max-width: px-to-rem(800px);
+   margin: 0 auto;
+   overflow: hidden; // floatのクリア
+ }
+ 
+ &__ceo-image {
+   float: left;
+   margin-right: px-to-rem(20px);
+   margin-bottom: px-to-rem(20px);
+   }
+ 
+ &__ceo-text-body {
+   overflow: hidden; // floatのクリア
+ }
+ 
+ &__ceo-text {
+   font-size: px-clamp(14,16,375,2000);
+   letter-spacing: .05em;
+   line-height: 1.6;
+ }
+ 
+ &__ceo-text-link {
+   color: var(--link-color);
+   text-decoration: underline;
+   
+   &:hover {
+     opacity: 0.8;
+   }
+ }
+//  office画像
+&__office{
+ margin-top: px-clamp(50,80,375,2000);
+}
+}

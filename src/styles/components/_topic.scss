@@ -1,0 +1,39 @@
+@use"../function/_mixin.scss" as *;
+
+.topic{
+    margin-top: px-to-rem(20px);
+    @include responsive("tablet"){
+        width: 80%;
+        margin: 0;
+    }
+   &__link{
+      display: inline-block;
+      padding-bottom: px-to-rem(15px);
+      width: 100%;
+      border-bottom: px-to-rem(1px) solid var(--topic-line);
+      transition: .3s;
+      &:hover{
+        color: var(--main-color);
+      }
+    }
+   &__link:not(:first-of-type){
+    padding: px-to-rem(15px) 0;
+   }
+   &__time,
+   &__text{
+    font-size: px-to-rem(15px);
+    font-weight: 500;
+    line-height: 1.8;
+   }
+   &__text{
+    @include responsive("tablet"){
+      margin-left: px-to-rem(20px);
+    }
+   }
+}
+
+// company-topic
+
+.topic-company{
+  width: 100%;
+}

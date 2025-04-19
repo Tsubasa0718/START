@@ -1,0 +1,23 @@
+@use"../function/_mixin.scss" as *;
+.header{
+   height: px-clamp(60,90,375,2000);
+   background-color: var(--base-color);
+   &__body{
+    @include responsive("tablet"){
+     padding: px-to-rem(28px) px-to-rem(70px) px-to-rem(29px) px-to-rem(70px) ;
+    }
+   } 
+   &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    @include responsive("tablet"){
+    align-items: center;
+    }
+    }
+   &__logo{
+    padding: px-to-rem(20px) 0 px-to-rem(20px) px-to-rem(20px);
+    @include responsive("tablet"){
+     padding: 0;
+    }
+   }
+}

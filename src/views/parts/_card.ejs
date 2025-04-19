@@ -1,0 +1,20 @@
+<div class="card-body">
+    <div class="card-wrapper">
+        <% cardData.forEach(item=>{ %>
+          <div class="card">
+            <figure class="card__icon">
+                <picture>
+                    <source srcset="../img/<%= item.spIcon %>" media="(max-widht:768px)">
+                    <img src="../img/<%= item.pcIcon %>" alt="<%= item.alt %>">
+                </picture>
+                <figcaption class="card__caption">
+                    <%= item.caption %>
+                </figcaption>
+            </figure>
+            <div class="card__text-body">
+                <p class="card__text"><%= item.text %></p>
+            </div>
+          </div>    
+        <% }) %>
+    </div>
+</div>

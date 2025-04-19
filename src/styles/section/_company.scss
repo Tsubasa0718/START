@@ -1,0 +1,23 @@
+@use "../function/_mixin.scss" as *;
+
+.company{
+  padding: px-clamp(60,90,375,2000) 0 px-clamp(60,100,375,2000) 0;
+  &__map{
+    margin-bottom: px-clamp(50,80,375,2000);
+    iframe{
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;  
+    }
+  }
+  &__map-link-body{
+    margin-top: px-to-rem(20px);
+    text-align: right;
+  }
+  &__map-link{
+    font-size: px-to-rem(14px);
+    line-height: 1.1;
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+}

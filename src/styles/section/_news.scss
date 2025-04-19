@@ -1,0 +1,15 @@
+@use"../function/_mixin.scss" as *;
+
+.news{
+    margin-top: px-clamp(40,60,375,2000);
+  &__wrapper{
+   @include responsive("tablet"){
+    display: flex;
+   }
+  }
+  &__title{
+    @include responsive("tablet"){
+      width: 20%;
+    }
+  }
+}

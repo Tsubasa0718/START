@@ -1,0 +1,41 @@
+@use"../function/_mixin.scss" as *;
+
+.card-wrapper{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: px-to-rem(20px);
+  align-items: stretch;
+  @include responsive("phone"){
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: px-to-rem(30px);
+  }
+  @include responsive("desktop"){
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card{
+  padding: px-clamp(40,50,375,2000) px-clamp(30,50,375,2000) px-clamp(40,50,375,2000) px-clamp(30,50,375,2000);
+  background-color: var(--base-color);
+  box-shadow: 0px px-to-rem(3px) px-to-rem(21px) 0px rgba(0, 0, 0, 0.16) ;
+  &__icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  &__caption{
+    margin-top: px-clamp(5,10,375,2000);
+    font-size: px-clamp(16,18,375,2000);
+    font-weight: bold;
+    line-height: 1.15;
+  }
+  &__text-body{
+    margin-top: px-clamp(10,20,375,2000);
+  }
+  &__text{
+    font-size: px-to-rem(14px);
+    line-height: 1.7;
+  }
+}

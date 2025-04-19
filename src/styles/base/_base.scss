@@ -1,0 +1,28 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+:root{
+    --main-color:#DD1B57;
+    --base-color:#FFFFFF;
+    --text-color:#333333;
+    --service-color:#F2F2F2;
+    --topic-line:#E8E8E8;
+    --Tableline-color:#DDDDDD;
+    --link-color: #349BF4;
+}

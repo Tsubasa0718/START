@@ -1,0 +1,22 @@
+@use "../function/_mixin.scss" as *;
+
+.head-bg{
+  background-image: url(../img/mv.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: px-clamp(160,190,375,2000);
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   &__title{
+     font-size: px-clamp(28,40,375,2000);
+     font-weight: bold;
+     letter-spacing: .1em;
+     color: var(--base-color);
+
+    }
+}

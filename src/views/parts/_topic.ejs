@@ -1,0 +1,8 @@
+<div class="topic">
+     <% topicData.forEach(item=>{ %>
+       <a class="topic__link" href="#">
+         <time class="topic__time" datetime="<%= item.datetime %>"><%= item.time %></time>
+         <span class="topic__text"><%= item.article %></span>
+      </a>
+  <% }) %>
+ </div>

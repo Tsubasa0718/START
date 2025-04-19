@@ -1,0 +1,36 @@
+@use "../function/_mixin.scss" as *;
+
+.table-body{
+   margin-bottom: px-to-rem(50px); 
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    &__th,
+    &__td{
+      font-size: px-to-rem(14px);
+      line-height: 1.5;
+      padding-bottom: px-to-rem(20px);
+      border-bottom: px-to-rem(1px) solid var( --Tableline-color);
+    }
+   &__tr:not(:first-of-type){
+    .table__th,
+    .table__td{
+      padding: px-to-rem(20px) 0;
+    }
+   }
+  &__th{
+    width: 30%;
+  @include responsive("tablet"){
+    width: 20%;
+  }
+  }
+  &__td{
+    width: 70%;
+    @include responsive("tablet"){
+        width: 80%;
+    }
+  }
+}
