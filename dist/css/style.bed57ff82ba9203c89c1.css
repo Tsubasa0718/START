@@ -544,6 +544,18 @@ th {
   line-height: 1.15;
   color: var(--base-color);
 }
+.footer__link-body {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+.footer__link {
+  font-size: 1.25rem;
+  color: var(--base-color);
+  transition: 0.3s;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
 
 .section-title {
   font-size: clamp(2rem, 1.8846153846rem + 0.4923076923vw, 2.5rem);
@@ -871,4 +883,4 @@ th {
   }
 }
 
-/*# sourceMappingURL=style.c8ec6d453f0401d30f94.css.map*/
+/*# sourceMappingURL=style.bed57ff82ba9203c89c1.css.map*/
